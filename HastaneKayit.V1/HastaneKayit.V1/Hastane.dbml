@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Hastane" Class="HastaneDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DMR159\DB_BERITAN;Initial Catalog=Hastane;User ID=sa;Encrypt=False" SettingsObjectName="HastaneKayit.V1.Properties.Settings" SettingsPropertyName="HastaneConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbl_FaturaBilgileri" Member="tbl_FaturaBilgileris">
+    <Type Name="tbl_FaturaBilgileri">
+      <Column Name="FaturaID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HastaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FaturaTarihi" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="OdemeMiktari" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Association Name="tbl_Hastalar_tbl_FaturaBilgileri" Member="tbl_Hastalar" ThisKey="HastaID" OtherKey="HastaID" Type="tbl_Hastalar" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_HastaGecmisi" Member="tbl_HastaGecmisis">
+    <Type Name="tbl_HastaGecmisi">
+      <Column Name="GecmisID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HastaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Tedavi" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="tbl_Hastalar_tbl_HastaGecmisi" Member="tbl_Hastalar" ThisKey="HastaID" OtherKey="HastaID" Type="tbl_Hastalar" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Ilac" Member="tbl_Ilacs">
+    <Type Name="tbl_Ilac">
+      <Column Name="IlacID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IlacAdi" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="StokMiktari" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fiyat" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_OdaDrumu" Member="tbl_OdaDrumus">
+    <Type Name="tbl_OdaDrumu">
+      <Column Name="OdaID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OdaNumarasi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DoluMu" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Personel" Member="tbl_Personels">
+    <Type Name="tbl_Personel">
+      <Column Name="PersonelID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ad" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Soyad" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Departman" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Telefon" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Randevular" Member="tbl_Randevulars">
+    <Type Name="tbl_Randevular">
+      <Column Name="RandevuID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RandevuTarihi" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="RandevuSaati" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="DoktorID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HastaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tbl_Randevular_tbl_MuayeneBilgileri" Member="tbl_MuayeneBilgileris" ThisKey="RandevuID" OtherKey="RandevuID" Type="tbl_MuayeneBilgileri" />
+      <Association Name="tbl_Hastalar_tbl_Randevular" Member="tbl_Hastalar" ThisKey="HastaID" OtherKey="HastaID" Type="tbl_Hastalar" IsForeignKey="true" />
+      <Association Name="tbl_Doktorlar_tbl_Randevular" Member="tbl_Doktorlar" ThisKey="DoktorID" OtherKey="DoktorID" Type="tbl_Doktorlar" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Receteler" Member="tbl_Recetelers">
+    <Type Name="tbl_Receteler">
+      <Column Name="ReceteID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MuayeneID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IlacAdi" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Dozaj" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="tbl_MuayeneBilgileri_tbl_Receteler" Member="tbl_MuayeneBilgileri" ThisKey="MuayeneID" OtherKey="MuayeneID" Type="tbl_MuayeneBilgileri" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Bolum" Member="tbl_Bolums">
+    <Type Name="tbl_Bolum">
+      <Column Name="BolumID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BolumAdi" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="tbl_Bolum_tbl_Doktorlar" Member="tbl_Doktorlars" ThisKey="BolumID" OtherKey="BolumID" Type="tbl_Doktorlar" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_MuayeneBilgileri" Member="tbl_MuayeneBilgileris">
+    <Type Name="tbl_MuayeneBilgileri">
+      <Column Name="MuayeneID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RandevuID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MuayeneTarihi" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Teşhis" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="HastaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tbl_MuayeneBilgileri_tbl_Receteler" Member="tbl_Recetelers" ThisKey="MuayeneID" OtherKey="MuayeneID" Type="tbl_Receteler" />
+      <Association Name="tbl_Randevular_tbl_MuayeneBilgileri" Member="tbl_Randevular" ThisKey="RandevuID" OtherKey="RandevuID" Type="tbl_Randevular" IsForeignKey="true" />
+      <Association Name="tbl_Hastalar_tbl_MuayeneBilgileri" Member="tbl_Hastalar" ThisKey="HastaID" OtherKey="HastaID" Type="tbl_Hastalar" IsForeignKey="true" />
+      <Association Name="tbl_Hastalar_tbl_MuayeneBilgileri1" Member="tbl_Hastalar1" ThisKey="HastaID" OtherKey="HastaID" Type="tbl_Hastalar" IsForeignKey="true" />
+      <Association Name="tbl_Hastalar_tbl_MuayeneBilgileri2" Member="tbl_Hastalar2" ThisKey="HastaID" OtherKey="HastaID" Type="tbl_Hastalar" IsForeignKey="true" />
+      <Association Name="tbl_Hastalar_tbl_MuayeneBilgileri3" Member="tbl_Hastalar3" ThisKey="HastaID" OtherKey="HastaID" Type="tbl_Hastalar" IsForeignKey="true" />
+      <Association Name="tbl_Hastalar_tbl_MuayeneBilgileri4" Member="tbl_Hastalar4" ThisKey="HastaID" OtherKey="HastaID" Type="tbl_Hastalar" IsForeignKey="true" />
+      <Association Name="tbl_Hastalar_tbl_MuayeneBilgileri5" Member="tbl_Hastalar5" ThisKey="HastaID" OtherKey="HastaID" Type="tbl_Hastalar" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Hastalar" Member="tbl_Hastalars">
+    <Type Name="tbl_Hastalar">
+      <Column Name="HastaID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HastaTC" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="HastaSifre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="HastaAd" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="HastaSoyad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="HastaCinsiyet" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="HastaDogumTarihi" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="HastaTelefon" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="HastaMail" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="HastaAdres" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="HastaHesKodu" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_Hastalar_tbl_FaturaBilgileri" Member="tbl_FaturaBilgileris" ThisKey="HastaID" OtherKey="HastaID" Type="tbl_FaturaBilgileri" />
+      <Association Name="tbl_Hastalar_tbl_HastaGecmisi" Member="tbl_HastaGecmisis" ThisKey="HastaID" OtherKey="HastaID" Type="tbl_HastaGecmisi" />
+      <Association Name="tbl_Hastalar_tbl_Randevular" Member="tbl_Randevulars" ThisKey="HastaID" OtherKey="HastaID" Type="tbl_Randevular" />
+      <Association Name="tbl_Hastalar_tbl_MuayeneBilgileri" Member="tbl_MuayeneBilgileris" ThisKey="HastaID" OtherKey="HastaID" Type="tbl_MuayeneBilgileri" />
+      <Association Name="tbl_Hastalar_tbl_MuayeneBilgileri1" Member="tbl_MuayeneBilgileris1" ThisKey="HastaID" OtherKey="HastaID" Type="tbl_MuayeneBilgileri" />
+      <Association Name="tbl_Hastalar_tbl_MuayeneBilgileri2" Member="tbl_MuayeneBilgileris2" ThisKey="HastaID" OtherKey="HastaID" Type="tbl_MuayeneBilgileri" />
+      <Association Name="tbl_Hastalar_tbl_MuayeneBilgileri3" Member="tbl_MuayeneBilgileris3" ThisKey="HastaID" OtherKey="HastaID" Type="tbl_MuayeneBilgileri" />
+      <Association Name="tbl_Hastalar_tbl_MuayeneBilgileri4" Member="tbl_MuayeneBilgileris4" ThisKey="HastaID" OtherKey="HastaID" Type="tbl_MuayeneBilgileri" />
+      <Association Name="tbl_Hastalar_tbl_MuayeneBilgileri5" Member="tbl_MuayeneBilgileris5" ThisKey="HastaID" OtherKey="HastaID" Type="tbl_MuayeneBilgileri" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Doktorlar" Member="tbl_Doktorlars">
+    <Type Name="tbl_Doktorlar">
+      <Column Name="DoktorID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DoktorTC" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="DoktorSifre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DoktorAd" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DoktorSoyad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DoktorCinsiyet" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="DoktorDoğumTarihi" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="DoktorTelefon" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="DoktorMail" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DoktorAdres" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="DoktorUzmanlik" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DoktorPolikinik" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DoktorHesKodu" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="BolumID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tbl_Doktorlar_tbl_Randevular" Member="tbl_Randevulars" ThisKey="DoktorID" OtherKey="DoktorID" Type="tbl_Randevular" />
+      <Association Name="tbl_Bolum_tbl_Doktorlar" Member="tbl_Bolum" ThisKey="BolumID" OtherKey="BolumID" Type="tbl_Bolum" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Yonetici" Member="tbl_Yoneticis">
+    <Type Name="tbl_Yonetici">
+      <Column Name="YoneticiID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KullaniciAdi" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Sifre" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Ad" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Soyad" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TC" Type="System.String" DbType="NVarChar(11)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Duyuru" Member="tbl_Duyurus">
+    <Type Name="tbl_Duyuru">
+      <Column Name="DuyuruID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Baslik" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Icerik" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Tarih" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

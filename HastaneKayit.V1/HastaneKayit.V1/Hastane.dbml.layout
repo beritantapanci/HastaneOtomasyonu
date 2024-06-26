@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.375, 15" name="Hastane">
+  <DataContextMoniker Name="/HastaneDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f6bcf8d9-b0be-4356-9360-6a8132105525" absoluteBounds="3.5, 5, 2, 1.5785953775048256">
+      <DataClassMoniker Name="/HastaneDataContext/tbl_FaturaBilgileri" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eeb0f7f8-f03f-483e-9097-702c146fee31" absoluteBounds="3.5150000005960464, 5.46000000089407, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bea33af3-f2a5-4583-9c4d-77917f9d7eb3" absoluteBounds="3.5, 7.25, 2, 1.3862939458340406">
+      <DataClassMoniker Name="/HastaneDataContext/tbl_HastaGecmisi" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e4185204-3db0-4788-9b9a-5acc967ba0a0" absoluteBounds="3.5150000005960464, 7.71000000089407, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="62213983-6d91-49ec-a5e8-8dab195ce27a" absoluteBounds="6.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/HastaneDataContext/tbl_Ilac" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7210a1ec-b5cc-4e43-b5ec-085e15845e1e" absoluteBounds="6.7650000000000006, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b127e1ca-b348-4e4f-b630-bffdb1a5bfd8" absoluteBounds="6.75, 5.75, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/HastaneDataContext/tbl_OdaDrumu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="73b875af-8468-49f2-bf84-0b81935e743b" absoluteBounds="6.7650000000000006, 6.2100000000000009, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="efaedb1d-4d31-4807-b909-5acc66f81be5" absoluteBounds="6.75, 8.75, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/HastaneDataContext/tbl_Personel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="52ad7ea6-d814-4709-b03a-217b28ce3799" absoluteBounds="6.7650000000000006, 9.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="83741f6b-ba17-44f1-8204-a5ac668a859a" absoluteBounds="3.375, 0.625, 2, 1.7708968091756105">
+      <DataClassMoniker Name="/HastaneDataContext/tbl_Randevular" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1a981a56-ed75-4f21-ab68-4ced91765702" absoluteBounds="3.3900000005960464, 1.0850000008940697, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="77352796-d229-4e66-beb8-a6bb3a655894" absoluteBounds="9, 3.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/HastaneDataContext/tbl_Receteler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f68d3dbb-f7b4-4595-a7fd-6e495be54cae" absoluteBounds="9.0150000005960464, 3.7100000008940697, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ba7418ec-6685-482b-badb-aadd85b101f1" absoluteBounds="1.5, 12.625, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/HastaneDataContext/tbl_Bolum" />
+      <nestedChildShapes>
+        <elementListCompartment Id="39ab6de6-0d8b-4472-abda-6b0044dd547c" absoluteBounds="1.5150000005960464, 13.08500000089407, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2167e94c-c667-4e1e-bd07-01816f4821c0" absoluteBounds="6.25, 3.25, 2, 1.7708968098958326">
+      <DataClassMoniker Name="/HastaneDataContext/tbl_MuayeneBilgileri" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8a27b7b6-31b2-410e-8f2e-39f93f2353f3" absoluteBounds="6.2650000005960464, 3.7100000008940697, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 4.0392976889573); (9 : 4.0392976889573)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HastaneDataContext/tbl_MuayeneBilgileri/tbl_MuayeneBilgileri_tbl_Receteler" />
+      <nodes>
+        <classShapeMoniker Id="2167e94c-c667-4e1e-bd07-01816f4821c0" />
+        <classShapeMoniker Id="77352796-d229-4e66-beb8-a6bb3a655894" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.40625 : 2.39589680917561); (3.40625 : 4.09375); (6.25 : 4.09375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HastaneDataContext/tbl_Randevular/tbl_Randevular_tbl_MuayeneBilgileri" />
+      <nodes>
+        <classShapeMoniker Id="83741f6b-ba17-44f1-8204-a5ac668a859a" />
+        <classShapeMoniker Id="2167e94c-c667-4e1e-bd07-01816f4821c0" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c80cf406-432f-4dfc-925a-2319eea8b481" absoluteBounds="1.125, 2.75, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/HastaneDataContext/tbl_Hastalar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="64df4563-3e12-48df-9fb1-e8b97f98f850" absoluteBounds="1.1399999999999997, 3.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.125 : 5.33735270182292); (3.5 : 5.33735270182292)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HastaneDataContext/tbl_Hastalar/tbl_Hastalar_tbl_FaturaBilgileri" />
+      <nodes>
+        <classShapeMoniker Id="c80cf406-432f-4dfc-925a-2319eea8b481" />
+        <classShapeMoniker Id="f6bcf8d9-b0be-4356-9360-6a8132105525" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.03125 : 5.67470540364583); (3.03125 : 7.71875); (3.5 : 7.71875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HastaneDataContext/tbl_Hastalar/tbl_Hastalar_tbl_HastaGecmisi" />
+      <nodes>
+        <classShapeMoniker Id="c80cf406-432f-4dfc-925a-2319eea8b481" />
+        <classShapeMoniker Id="bea33af3-f2a5-4583-9c4d-77917f9d7eb3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.125 : 2.75); (3.375 : 2.39589680917561)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HastaneDataContext/tbl_Hastalar/tbl_Hastalar_tbl_Randevular" />
+      <nodes>
+        <classShapeMoniker Id="c80cf406-432f-4dfc-925a-2319eea8b481" />
+        <classShapeMoniker Id="83741f6b-ba17-44f1-8204-a5ac668a859a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.125 : 3.609375); (6.25 : 3.609375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HastaneDataContext/tbl_Hastalar/tbl_Hastalar_tbl_MuayeneBilgileri" />
+      <nodes>
+        <classShapeMoniker Id="c80cf406-432f-4dfc-925a-2319eea8b481" />
+        <classShapeMoniker Id="2167e94c-c667-4e1e-bd07-01816f4821c0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.125 : 4.45703125); (6.25 : 4.45703125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HastaneDataContext/tbl_Hastalar/tbl_Hastalar_tbl_MuayeneBilgileri1" />
+      <nodes>
+        <classShapeMoniker Id="c80cf406-432f-4dfc-925a-2319eea8b481" />
+        <classShapeMoniker Id="2167e94c-c667-4e1e-bd07-01816f4821c0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.125 : 3.8515625); (3.32291666666667 : 3.8515625 : JumpStart); (3.48958333333333 : 3.8515625 : JumpEnd); (6.25 : 3.8515625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HastaneDataContext/tbl_Hastalar/tbl_Hastalar_tbl_MuayeneBilgileri2" />
+      <nodes>
+        <classShapeMoniker Id="c80cf406-432f-4dfc-925a-2319eea8b481" />
+        <classShapeMoniker Id="2167e94c-c667-4e1e-bd07-01816f4821c0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.125 : 3.3671875); (3.32291666666667 : 3.3671875 : JumpStart); (3.48958333333333 : 3.3671875 : JumpEnd); (6.25 : 3.3671875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HastaneDataContext/tbl_Hastalar/tbl_Hastalar_tbl_MuayeneBilgileri3" />
+      <nodes>
+        <classShapeMoniker Id="c80cf406-432f-4dfc-925a-2319eea8b481" />
+        <classShapeMoniker Id="2167e94c-c667-4e1e-bd07-01816f4821c0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.125 : 4.8203125); (6.25 : 4.8203125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HastaneDataContext/tbl_Hastalar/tbl_Hastalar_tbl_MuayeneBilgileri4" />
+      <nodes>
+        <classShapeMoniker Id="c80cf406-432f-4dfc-925a-2319eea8b481" />
+        <classShapeMoniker Id="2167e94c-c667-4e1e-bd07-01816f4821c0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.125 : 4.275390625); (6.25 : 4.275390625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HastaneDataContext/tbl_Hastalar/tbl_Hastalar_tbl_MuayeneBilgileri5" />
+      <nodes>
+        <classShapeMoniker Id="c80cf406-432f-4dfc-925a-2319eea8b481" />
+        <classShapeMoniker Id="2167e94c-c667-4e1e-bd07-01816f4821c0" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="63e83418-c6e1-401c-9726-b2c0f2077218" absoluteBounds="0.875, 8.25, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/HastaneDataContext/tbl_Doktorlar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c9723cec-f858-4e4b-bb8c-c1c92aa4148b" absoluteBounds="0.89000000000000012, 8.71, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(0.96875 : 8.25); (0.96875 : 1.47919590458781); (3.375 : 1.47919590458781)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HastaneDataContext/tbl_Doktorlar/tbl_Doktorlar_tbl_Randevular" />
+      <nodes>
+        <classShapeMoniker Id="63e83418-c6e1-401c-9726-b2c0f2077218" />
+        <classShapeMoniker Id="83741f6b-ba17-44f1-8204-a5ac668a859a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.1875 : 12.625); (2.1875 : 11.7516097005208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HastaneDataContext/tbl_Bolum/tbl_Bolum_tbl_Doktorlar" />
+      <nodes>
+        <classShapeMoniker Id="ba7418ec-6685-482b-badb-aadd85b101f1" />
+        <classShapeMoniker Id="63e83418-c6e1-401c-9726-b2c0f2077218" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a01de319-c759-4ac6-aa57-56b06b4dcfa5" absoluteBounds="9.125, 0.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/HastaneDataContext/tbl_Yonetici" />
+      <nestedChildShapes>
+        <elementListCompartment Id="be41172f-c7e5-4eb7-b0d0-5b5ba4243532" absoluteBounds="9.14, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c1986939-5757-42a7-be93-647c059759d8" absoluteBounds="5.75, 13.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/HastaneDataContext/tbl_Duyuru" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d7090be6-ba69-466b-8de2-7c5d49aa4378" absoluteBounds="5.765, 13.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A3CA830C-BE85-46FF-B3F9-52A865F8ED78}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HastaneKayit.V1</RootNamespace>
+    <AssemblyName>HastaneKayit.V1</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.Data.Desktop.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Drawing.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v23.2.Core, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v23.2.Core, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v23.2.Core, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v23.2.Core, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v23.2.Core, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v23.2.Core, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v23.2.Core.Desktop, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Doktor\frmDoktorGris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor\frmDoktorGris.Designer.cs">
+      <DependentUpon>frmDoktorGris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doktor\frmDoktorKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor\frmDoktorKayit.Designer.cs">
+      <DependentUpon>frmDoktorKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doktor\frmDoktorProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor\frmDoktorProfil.Designer.cs">
+      <DependentUpon>frmDoktorProfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaSayfa.Designer.cs">
+      <DependentUpon>frmAnaSayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doktor\frmRandevular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor\frmRandevular.Designer.cs">
+      <DependentUpon>frmRandevular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSifremiUnuttum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSifremiUnuttum.Designer.cs">
+      <DependentUpon>frmSifremiUnuttum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hastane.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hastane.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Hasta\frmHastaGris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hasta\frmHastaGris.Designer.cs">
+      <DependentUpon>frmHastaGris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hasta\frmHastaKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hasta\frmHastaKayit.Designer.cs">
+      <DependentUpon>frmHastaKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hasta\frmHastaProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hasta\frmHastaProfil.Designer.cs">
+      <DependentUpon>frmHastaProfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hasta\RandevuAl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hasta\RandevuAl.Designer.cs">
+      <DependentUpon>RandevuAl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetici\frmYonetici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yonetici\frmYonetici.Designer.cs">
+      <DependentUpon>frmYonetici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Yonetici\YoneticiGris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yonetici\YoneticiGris.Designer.cs">
+      <DependentUpon>YoneticiGris.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Doktor\frmDoktorGris.resx">
+      <DependentUpon>frmDoktorGris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doktor\frmDoktorKayit.resx">
+      <DependentUpon>frmDoktorKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doktor\frmDoktorProfil.resx">
+      <DependentUpon>frmDoktorProfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaSayfa.resx">
+      <DependentUpon>frmAnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yonetici\YoneticiGris.resx">
+      <DependentUpon>YoneticiGris.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Hastane.dbml.layout">
+      <DependentUpon>Hastane.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Doktor\frmRandevular.resx">
+      <DependentUpon>frmRandevular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSifremiUnuttum.resx">
+      <DependentUpon>frmSifremiUnuttum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hasta\frmHastaGris.resx">
+      <DependentUpon>frmHastaGris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hasta\frmHastaKayit.resx">
+      <DependentUpon>frmHastaKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hasta\frmHastaProfil.resx">
+      <DependentUpon>frmHastaProfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hasta\RandevuAl.resx">
+      <DependentUpon>RandevuAl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yonetici\frmYonetici.resx">
+      <DependentUpon>frmYonetici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Hastane.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Hastane.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneDataSet.xsc">
+      <DependentUpon>HastaneDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaneDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneDataSet.xss">
+      <DependentUpon>HastaneDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\Form1.datasource" />
+    <None Include="Properties\DataSources\frmAnaSayfa.datasource" />
+    <None Include="Properties\DataSources\frmRandevular.datasource" />
+    <None Include="Properties\DataSources\frmSifremiUnuttum.datasource" />
+    <None Include="Properties\DataSources\HastaneDataContext.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.DoktorlarDataTable.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.DoktorlarRow.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.DoktorlarRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.DoktorlarRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.FaturaBilgileriDataTable.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.FaturaBilgileriRow.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.FaturaBilgileriRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.FaturaBilgileriRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.HastaGecmisiDataTable.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.HastaGecmisiRow.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.HastaGecmisiRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.HastaGecmisiRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.HastalarDataTable.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.HastalarRow.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.HastalarRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.HastalarRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.IlacDataTable.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.IlacRow.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.IlacRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.IlacRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.MuayeneBilgileriDataTable.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.MuayeneBilgileriRow.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.MuayeneBilgileriRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.MuayeneBilgileriRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.OdaDurumuDataTable.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.OdaDurumuRow.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.OdaDurumuRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.OdaDurumuRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.PersonelDataTable.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.PersonelRow.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.PersonelRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.PersonelRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.RandevularDataTable.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.RandevularRow.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.RandevularRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.RandevularRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.RecetelerDataTable.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.RecetelerRow.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.RecetelerRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\HastaneDataSet.RecetelerRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\HastaneKayit.V1.Doktor.frmDoktorGris.datasource" />
+    <None Include="Properties\DataSources\HastaneKayit.V1.Doktor.frmDoktorKayit.datasource" />
+    <None Include="Properties\DataSources\HastaneKayit.V1.Doktor.frmDoktorProfil.datasource" />
+    <None Include="Properties\DataSources\HastaneKayit.V1.Hasta.frmHastaGris.datasource" />
+    <None Include="Properties\DataSources\HastaneKayit.V1.Hasta.frmHastaKayit.datasource" />
+    <None Include="Properties\DataSources\HastaneKayit.V1.Hasta.frmHastaProfil.datasource" />
+    <None Include="Properties\DataSources\HastaneKayit.V1.Hasta.RandevuAl.datasource" />
+    <None Include="Properties\DataSources\HastaneKayit.V1.HastaneDataSetTableAdapters.DoktorlarTableAdapter.datasource" />
+    <None Include="Properties\DataSources\HastaneKayit.V1.HastaneDataSetTableAdapters.FaturaBilgileriTableAdapter.datasource" />
+    <None Include="Properties\DataSources\HastaneKayit.V1.HastaneDataSetTableAdapters.HastaGecmisiTableAdapter.datasource" />
+    <None Include="Properties\DataSources\HastaneKayit.V1.HastaneDataSetTableAdapters.HastalarTableAdapter.datasource" />
+    <None Include="Properties\DataSources\HastaneKayit.V1.HastaneDataSetTableAdapters.IlacTableAdapter.datasource" />
+    <None Include="Properties\DataSources\HastaneKayit.V1.HastaneDataSetTableAdapters.MuayeneBilgileriTableAdapter.datasource" />
+    <None Include="Properties\DataSources\HastaneKayit.V1.HastaneDataSetTableAdapters.OdaDurumuTableAdapter.datasource" />
+    <None Include="Properties\DataSources\HastaneKayit.V1.HastaneDataSetTableAdapters.PersonelTableAdapter.datasource" />
+    <None Include="Properties\DataSources\HastaneKayit.V1.HastaneDataSetTableAdapters.RandevularTableAdapter.datasource" />
+    <None Include="Properties\DataSources\HastaneKayit.V1.HastaneDataSetTableAdapters.RecetelerTableAdapter.datasource" />
+    <None Include="Properties\DataSources\HastaneKayit.V1.HastaneDataSetTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\HastaneKayit.V1.HastaneDataSetTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\HastaneKayit.V1.NewFolder1.frmYonetici+Duyuru.datasource" />
+    <None Include="Properties\DataSources\HastaneKayit.V1.NewFolder1.frmYonetici.datasource" />
+    <None Include="Properties\DataSources\HastaneKayit.V1.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\HastaneKayit.V1.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\HastaneKayit.V1.Yonetici.YoneticiGris.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\tbl_Bolum.datasource" />
+    <None Include="Properties\DataSources\tbl_Doktorlar.datasource" />
+    <None Include="Properties\DataSources\tbl_Duyuru.datasource" />
+    <None Include="Properties\DataSources\tbl_FaturaBilgileri.datasource" />
+    <None Include="Properties\DataSources\tbl_HastaGecmisi.datasource" />
+    <None Include="Properties\DataSources\tbl_Hastalar.datasource" />
+    <None Include="Properties\DataSources\tbl_Ilac.datasource" />
+    <None Include="Properties\DataSources\tbl_MuayeneBilgileri.datasource" />
+    <None Include="Properties\DataSources\tbl_OdaDrumu.datasource" />
+    <None Include="Properties\DataSources\tbl_Personel.datasource" />
+    <None Include="Properties\DataSources\tbl_Randevular.datasource" />
+    <None Include="Properties\DataSources\tbl_Receteler.datasource" />
+    <None Include="Properties\DataSources\tbl_Yonetici.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
